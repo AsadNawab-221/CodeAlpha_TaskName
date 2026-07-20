@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="player">
+
+        <h2>🎵 Music Player</h2>
+
+        <!-- Album Cover -->
+        <img src="Cover Images/cover1.jpg" id="cover" class="cover">
+
+        <!-- Song Info -->
+        <h3 id="title">Song Title</h3>
+        <p id="artist">Artist Name</p>
+
+        <!-- Progress -->
+        <div class="time">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+
+        <input type="range"
+               id="progress"
+               value="0"
+               min="0"
+               max="100">
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <button id="prev">
+                <i class="fas fa-backward"></i>
+            </button>
+
+            <button id="play">
+                <i class="fas fa-play"></i>
+            </button>
+
+            <button id="next">
+                <i class="fas fa-forward"></i>
+            </button>
+
+        </div>
+
+        <!-- Volume -->
+        <div class="volume">
+
+            <i class="fas fa-volume-down"></i>
+
+            <input type="range"
+                   id="volume"
+                   min="0"
+                   max="1"
+                   step="0.01"
+                   value="1">
+
+            <i class="fas fa-volume-up"></i>
+
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist">
+
+            <h4>Playlist</h4>
+
+            <ul id="playlist">
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Hidden Audio -->
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
